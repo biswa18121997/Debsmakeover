@@ -31,7 +31,7 @@ import { toast } from "sonner";
 // ----------------------------------------------------
 const formSchema = z
 	.object({
-		serviceType: z.enum(["bridal", "event", "editorial"], {
+		serviceType: z.enum(["bridal", "event", "editorial", "other"], {
 			errorMap: (issue, ctx) => ({ message: 'Please select a service' })
 		}),
 		date: z.date({ required_error: "Please select a date." }),
@@ -167,6 +167,7 @@ function BookingForm() {
 												{ id: "bridal", title: "Bridal" },
 												{ id: "event", title: "Special Event" },
 												{ id: "editorial", title: "Editorial" },
+												{ id: "other", title: "Others" }
 											].map((item) => (
 												<FormItem key={item.id}>
 													<FormControl>

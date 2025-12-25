@@ -17,7 +17,7 @@ const services = [
 	},
 	{
 		title: "Special Occasion",
-	//	price: "$120",
+		//	price: "$120",
 		description: "Long-lasting glam for galas, parties, or red carpet events.",
 		features: ["Custom Color Match", "Contouring & Highlighting", "Lashes Included", "24hr Wear Setting"],
 	},
@@ -47,7 +47,6 @@ export default function Services() {
 						>
 							<div className="flex justify-between items-baseline mb-4">
 								<h3 className="text-2xl font-serif">{service.title}</h3>
-								<span className="text-xl font-medium text-primary">{service.price}</span>
 							</div>
 							<p className="text-muted-foreground mb-8 leading-relaxed">
 								{service.description}

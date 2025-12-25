@@ -66,7 +66,7 @@ export default function Home() {
 							>
 								{/* Image Section - Alternates Left/Right */}
 								<div className={`md:col-span-7 lg:col-span-8 ${idx % 2 === 1 ? 'md:order-last' : 'md:order-first'}`}>
-									<Link href={`/portfolio/${work.id}`}>
+									<Link to={`/portfolio/${work.id}`}>
 										<a className="block relative overflow-hidden rounded-2xl shadow-2xl group cursor-pointer aspect-[4/3]">
 											<div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
 											<img
