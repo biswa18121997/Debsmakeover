@@ -78,7 +78,7 @@ function BookingForm() {
 		try {
 			let requestToServer = await fetch(import.meta.env.VITE_API_BASE_URL + '/book-session', {
 				'method': 'POST',
-				'Content-type': 'application/json',
+				'Content-Type': 'application/json',
 				'Body': JSON.stringify({ bookingData: values })
 			});
 			let responseInJson = await requestToServer?.json();
@@ -470,4 +470,5 @@ export default function BookingPage() {
 		</div>
 	);
 }
+//
 
