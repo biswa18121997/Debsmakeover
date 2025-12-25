@@ -31,8 +31,8 @@ import { toast } from "sonner";
 // ----------------------------------------------------
 const formSchema = z
 	.object({
-		service: z.enum(["bridal", "event", "editorial"], {
-			required_error: "Please select a service type.",
+		serviceType: z.enum(["bridal", "event", "editorial"], {
+			errorMap: (issue, ctx) => ({ message: 'Please select a service' })
 		}),
 		date: z.date({ required_error: "Please select a date." }),
 		time: z.string().min(1, "Please select a time."),
