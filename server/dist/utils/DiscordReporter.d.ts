@@ -1,2 +1,2 @@
-export declare const DiscordConnect: (webhookURL: any, message: any) => Promise<void>;
+export declare const DiscordConnect: (message: string) => Promise<void>;
 //# sourceMappingURL=DiscordReporter.d.ts.map

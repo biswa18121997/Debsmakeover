@@ -1,9 +1,10 @@
 import { ContactForm } from "../schema_models/ContactForm.js";
 import logger from "../utils/logger.js";
-export default async function contactUs() {
+import type { Request, Response, NextFunction } from 'express';
+export default async function contactUs(req: Request, res: Response, next: NextFunction) {
 	try {
-		const { name, email, interestedService, message } = req.body;
-		await ContactForm.inserOne({ name, email, interestedService, message });
+		let { name, email, serviceInterestedIn, message }: { name: string; email: string; serviceInterestedIn: string; message: string; } = req.body;
+		await ContactForm.insertOne({ name, email, serviceInterestedIn, message });
 		res.status(201).json({
 			sucess: true,
 			message: 'contact form submitted sucessfully!..You can expect a call/email soon'

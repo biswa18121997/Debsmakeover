@@ -1,6 +1,7 @@
-const webhookURL = process.env.DISCORD_APPLICATION_TRACKING_CHANNEL;
 
-export const DiscordConnect = async (webhookURL, message) => {
+export const DiscordConnect = async ( message: string): Promise<void> => {
+    
+const webhookURL = process.env.DISCORD_APPLICATION_TRACKING_CHANNEL as string;
 	try {
 		console.log("WebhookURL", webhookURL)
 		const response = await fetch(webhookURL, {

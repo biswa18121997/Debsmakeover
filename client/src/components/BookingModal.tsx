@@ -454,7 +454,7 @@ export default function BookingPage() {
 				<img
 					src="/download (3).png"
 					alt="Background"
-					className="w-full h-full object-cover opacity-70"
+					className="w-full h-full object-top opacity-70"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-tr from-background/80 via-background/40 to-transparent" />
 			</div>

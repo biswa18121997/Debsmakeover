@@ -72,7 +72,7 @@ export default function Home() {
 											<img
 												src={work.image}
 												alt={work.title}
-												className="w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
+												className="w-full object-top h-full transform transition-transform duration-700 ease-out group-hover:scale-105"
 											/>
 
 											{/* Hover Overlay Content */}

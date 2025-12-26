@@ -5,7 +5,7 @@ export default async function WakeServer(req, res) {
         });
     }
     catch (error) {
+        console.log(error);
     }
-    console.log(error);
 }
 //# sourceMappingURL=WakeServer.js.map

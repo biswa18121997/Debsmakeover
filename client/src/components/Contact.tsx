@@ -24,32 +24,31 @@ export default function Contact() {
 									to="mailto:hello@elenarossi.com"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
-									hello@elenarossi.com
+									rs660716@gmail.com
 								</Link>
 
 							</div>
 							<div>
 								<h3 className="text-lg font-medium mb-2">Studio</h3>
 								<p className="text-muted-foreground">
-									123 Fashion Ave, Suite 400<br />
-									New York, NY 10012
+									513/1, Ramkrishna Nagar Rd,<br /> Purbapara, Purbachal, Thakurpukur,<br /> Kolkata, West Bengal 700063
 								</p>
 							</div>
 							<div>
 								<h3 className="text-lg font-medium mb-4">Follow</h3>
 								<div className="flex gap-4">
-									<Link to={`instgram.com`} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+									<Link to={`https://www.instagram.com/debleenadasgupta/`} target="_blank" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
 										<Instagram className="w-5 h-5" />
 									</Link>
-									<Link to={`facebook.com`} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+									<Link to={`https://www.facebook.com/debleenadasgupta381`} target="_blank" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
 										<Facebook className="w-5 h-5" />
 									</Link>
-									<Link to={`mail.google.com`} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+									<Link to={`mail.google.com`} target="_blank" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
 										<Mail className="w-5 h-5" />
 									</Link>
 								</div>
 							</div>
-							<Link to={`https://wa.me/918777630087`}>
+							<Link to={`https://wa.me/918777630087`} target="_blank">
 								<motion.div
 									target="_blank"
 									whileHover={{ scale: 1.05 }}
