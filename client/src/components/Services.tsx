@@ -30,8 +30,7 @@ const services = [
 
 export default function Services() {
 	// We only need one piece of state: the name of the service (or null)
-	const [selectedService, setSelectedService] = useState(null);
-
+	const [selectedService, setSelectedService] = useState<string | null>(null);
 	return (
 		<section id="services" className="py-24 bg-secondary/30">
 			{/* 1. MOVE FORM OUTSIDE THE LOOP - Place it here so it's a single global modal */}
