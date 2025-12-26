@@ -57,3 +57,99 @@
 {"level":"info","message":"Database Connected","timestamp":"2025-12-26T19:12:25.097Z"}
 {"level":"info","message":"connectng to db !!...","timestamp":"2025-12-26T19:13:51.642Z"}
 {"level":"info","message":"Database Connected","timestamp":"2025-12-26T19:13:52.817Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:18:51.373Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:18:51.374Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:18:51.386Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:18:51.387Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:23:14.025Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:23:14.025Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:23:14.029Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:23:14.030Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:25:27.324Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:25:27.325Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:25:27.329Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:25:27.330Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:29:22.088Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:29:22.088Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:29:22.091Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:29:22.091Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:30:51.663Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:30:51.664Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:30:51.671Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:30:51.671Z"}
+{"level":"info","message":"connectng to db !!...","timestamp":"2025-12-26T19:48:46.275Z"}
+{"level":"info","message":"Database Connected","timestamp":"2025-12-26T19:48:47.147Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:49:08.500Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:49:08.502Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T19:49:08.529Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T19:49:08.532Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:01:28.131Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:01:28.131Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:01:28.136Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:01:28.137Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:04:23.540Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:04:23.540Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:04:23.545Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:04:23.545Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:13:13.349Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:13:13.350Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:13:13.355Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:13:13.356Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:18.824Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:18.825Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:18.829Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:18.830Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:24.664Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:24.665Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:24.670Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:24.670Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:34.712Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:34.712Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:34.715Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:34.715Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:49.406Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:49.406Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:22:49.412Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:22:49.412Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:19.919Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:19.920Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:19.922Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:19.922Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:25.855Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:25.855Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:25.858Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:25.859Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:31.242Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:31.242Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:23:31.245Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:23:31.245Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:27:12.769Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:27:12.770Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:27:12.773Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:27:12.773Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:30:41.099Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:30:41.099Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:31:20.893Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:31:20.893Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:31:20.908Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:31:20.913Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:32:39.617Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:32:39.617Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:32:39.625Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:32:39.625Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:38:36.754Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:38:36.755Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:38:36.757Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:38:36.757Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:40:18.891Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:40:18.892Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:40:18.894Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:40:18.894Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:44:26.683Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:44:26.683Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:44:26.686Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:44:26.686Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:44:53.760Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:44:53.760Z"}
+{"level":"info","message":"Received GET request to /api","timestamp":"2025-12-26T20:44:53.763Z"}
+{"level":"info","message":"Request body: undefined","timestamp":"2025-12-26T20:44:53.763Z"}

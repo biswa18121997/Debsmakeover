@@ -17,10 +17,10 @@ export default function Navbar() {
 	}, []);
 
 	const navLinks = [
-		{ name: "Portfolio", href: "#portfolio" },
-		{ name: "Services", href: "#services" },
-		{ name: "About", href: "#about" },
-		{ name: "Contact", href: "#contact" },
+		{ name: "Portfolio", href: "portfolio" },
+		{ name: "Services", href: "services" },
+		{ name: "About", href: "about" },
+		{ name: "Contact", href: "contact-us" },
 	];
 
 	return (

@@ -66,19 +66,21 @@ export default function Hero() {
 					</Link>
 
 					{/* Secondary Button: WhatsApp */}
-					<Button
-						size="lg"
-						className="group relative overflow-hidden rounded-full px-14 py-8 text-lg border border-2 border-black font-medium tracking-wide
+					<Link to={`https://wa.me/918777630087`} target="_blank">
+						<Button
+							size="lg"
+							className="group relative overflow-hidden rounded-full px-14 py-8 text-lg border border-2 border-black font-medium tracking-wide
              bg-white/80 backdrop-blur-md text-[#3a1f2d]
              border border-[#f2c6d4] shadow-sm
              transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl active:scale-95"
-					>
-						<span className="relative z-10 flex items-center">
-							<MessageCircle className="mr-3 h-5 w-5 text-green-800" />
-							Enquire on WhatsApp
-							<ArrowRight className="ml-3 h-4 w-4 opacity-0 transition-all duration-300 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0" />
-						</span>
-					</Button>
+						>
+							<span className="relative z-10 flex items-center">
+								<MessageCircle className="mr-3 h-5 w-5 text-green-800" />
+								Enquire on WhatsApp
+								<ArrowRight className="ml-3 h-4 w-4 opacity-0 transition-all duration-300 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0" />
+							</span>
+						</Button>
+					</Link>
 
 				</motion.div>
 			</div>

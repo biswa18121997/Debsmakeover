@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import InquiryForm from "./InquiryForm";
 
 const services = [
 	{
@@ -8,30 +10,45 @@ const services = [
 		//price: "$350+",
 		description: "Includes consultation, trial run, and day-of application with premium lashes.",
 		features: ["90min Consultation", "Skin Prep & Priming", "Premium Lashes Included", "Touch-up Kit"],
+		props: 'bridal makeup'
 	},
 	{
 		title: "Editorial & Photoshoot",
 		//price: "$150/hr",
 		description: "Creative direction and application for fashion, commercial, or personal branding shoots.",
 		features: ["Creative Direction", "High-Definition Finish", "On-set Touch-ups", "Multiple Look Changes"],
+		props: 'Editorial and Photoshoot'
 	},
 	{
 		title: "Special Occasion",
 		//	price: "$120",
 		description: "Long-lasting glam for galas, parties, or red carpet events.",
 		features: ["Custom Color Match", "Contouring & Highlighting", "Lashes Included", "24hr Wear Setting"],
+		props: 'Special ocassion'
 	},
 ];
 
 export default function Services() {
+	// We only need one piece of state: the name of the service (or null)
+	const [selectedService, setSelectedService] = useState(null);
+
 	return (
 		<section id="services" className="py-24 bg-secondary/30">
+			{/* 1. MOVE FORM OUTSIDE THE LOOP - Place it here so it's a single global modal */}
+			{selectedService && (
+				<InquiryForm
+					isOpen={true}
+					selectedInquiry={selectedService}
+					onClose={() => setSelectedService(null)} // This closes it by setting state to null
+				/>
+			)}
+
 			<div className="container mx-auto px-6">
 				<div className="text-center max-w-2xl mx-auto mb-16">
 					<span className="text-sm uppercase tracking-widest text-muted-foreground mb-4 block">Services</span>
 					<h2 className="text-4xl md:text-5xl font-serif mb-6">Curated Experiences</h2>
 					<p className="text-muted-foreground">
-						Tailored makeup services designed to enhance your natural beauty and bring your vision to life.
+						Tailored makeup services designed to enhance your natural beauty.
 					</p>
 				</div>
 
@@ -45,6 +62,8 @@ export default function Services() {
 							transition={{ delay: index * 0.1, duration: 0.6 }}
 							className="bg-background p-8 md:p-10 border border-transparent hover:border-primary/10 transition-all hover:shadow-lg"
 						>
+							{/* THE FORM WAS HERE BEFORE - REMOVED FROM HERE */}
+
 							<div className="flex justify-between items-baseline mb-4">
 								<h3 className="text-2xl font-serif">{service.title}</h3>
 							</div>
@@ -59,7 +78,11 @@ export default function Services() {
 									</li>
 								))}
 							</ul>
-							<Button variant="outline" className="w-full rounded-none border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+							<Button
+								onClick={() => setSelectedService(service.props)} // 2. Trigger the state
+								variant="outline"
+								className="w-full rounded-none border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+							>
 								Inquire
 							</Button>
 						</motion.div>
@@ -69,4 +92,3 @@ export default function Services() {
 		</section>
 	);
 }
-

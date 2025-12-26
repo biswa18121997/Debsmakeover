@@ -87,20 +87,21 @@ function BookingForm() {
 	}
 
 	return (
-		<Card className="border-none relative top-20 shadow-2xl bg-white backdrop-blur-sm overflow-hidden">
-			<CardHeader className="space-y-1 text-center pb-8 pt-10 bg-gradient-to-b from-primary/10 to-transparent">
-				<div className="mx-auto mb-4 p-3 rounded-full bg-primary/10 w-fit">
-					<Sparkles className="w-6 h-6 text-primary" />
-				</div>
-				<CardTitle className="text-3xl font-serif">
-					Book Your Session
-				</CardTitle>
-				<CardDescription>
-					Select a service and time for your appointment
-				</CardDescription>
-			</CardHeader>
+		<Card className="flex justify-center items-center border-none top-20 m-2 p-2 relative overflow-hidden bg-no-repeat bg-contain bg-[url(https://res.cloudinary.com/dfvng2adb/image/upload/v1766778492/fph0dcpatn4zmokyutho.jpg)]">
 
-			<CardContent className="p-8">
+			<CardContent className="p-8 w-1/2 shadow-2xl bg-white/50  rounded-xl top-30">
+				<CardHeader className="space-y-1 text-center pb-8 pt-10 bg-gradient-to-b from-primary/10 to-transparent ">
+					<div className="mx-auto mb-4 p-3 rounded-full bg-primary/10 w-fit">
+						<Sparkles className="w-6 h-6 text-primary" />
+					</div>
+					<CardTitle className="text-3xl font-serif">
+						Book Your Session
+					</CardTitle>
+					<CardDescription>
+						Select a service and time for your appointment
+					</CardDescription>
+				</CardHeader>
+
 				<Form {...form}>
 					<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
 
