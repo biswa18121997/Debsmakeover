@@ -50,7 +50,6 @@ export default function Contact() {
 							</div>
 							<Link to={`https://wa.me/918777630087`} target="_blank">
 								<motion.div
-									target="_blank"
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
 									animate={{ y: [0, -4, 0] }}
