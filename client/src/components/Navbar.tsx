@@ -32,11 +32,12 @@ export default function Navbar() {
 		>
 			<div className="container mx-auto px-6 flex items-center justify-between">
 				<Link to={'/'}>
-				
-					<a className="text-3xl font-serif tracking-tight flex items-center gap-2">
-						<span className="font-light">DEBLEENA’S</span>
 
-						<span className="relative font-extrabold text-white shadow-neutral-500">
+					<a className="text-3xl font-serif tracking-tight flex items-center gap-2">
+						<img width="58" height="58" className="border-t-2 border-l-2 rounded-lg p-2 " src="https://img.icons8.com/color/48/cosmetic-brush.png" alt="cosmetic-brush" />
+						<span className="font-light text-neutral-400">DEBLEENA’S</span>
+
+						<span className="relative font-extrabold text-white shadow-md shadow-black-500">
 							BLUSH
 							<span className="absolute left-0 -bottom-1 w-full h-[2px] bg-slate-300"></span>
 							<span className="absolute left-0 -bottom-2.5 w-full h-[2px] bg-white"></span>
@@ -52,7 +53,7 @@ export default function Navbar() {
 						<a
 							key={link.name}
 							href={link.href}
-							className="text-sm font-medium tracking-wide hover:text-primary transition-colors"
+							className="text-md font-medium tracking-wide hover:text-primary transition-colors"
 						>
 							{link.name.toUpperCase()}
 						</a>

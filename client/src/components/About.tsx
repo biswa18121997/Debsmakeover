@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
 	return (
-		<section id="about" className="py-24 overflow-hidden">
+		<section id="about" className="py-24 overflow-hidden scroll-smooth">
 			<div className="container mx-auto px-6">
 				<div className="flex flex-col md:flex-row items-center gap-16">
 
@@ -16,7 +16,7 @@ export default function About() {
 					>
 						<div className="aspect-[3/4] relative z-10">
 							<img
-								src={'../../public/download (2).png'}
+								src={'https://res.cloudinary.com/dfvng2adb/image/upload/v1766604034/tscgpogbmlcrtwvhggf7.png'}
 								alt="Elena Rossi"
 								className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
 							/>
@@ -48,12 +48,12 @@ export default function About() {
 						</div>
 						<div className="mt-10 flex items-center gap-8">
 							<div>
-								<span className="block text-3xl font-serif text-primary">10+</span>
+								<span className="block text-3xl font-serif text-primary">6+</span>
 								<span className="text-sm uppercase tracking-wider text-muted-foreground">Years Experience</span>
 							</div>
 							<div className="w-px h-12 bg-border" />
 							<div>
-								<span className="block text-3xl font-serif text-primary">500+</span>
+								<span className="block text-3xl font-serif text-primary">200+</span>
 								<span className="text-sm uppercase tracking-wider text-muted-foreground">Happy Clients</span>
 							</div>
 						</div>

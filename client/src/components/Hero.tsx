@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 //import heroImage from "@assets/generated_images/hero_image_of_high_fashion_makeup.png";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
 	return (
@@ -12,7 +13,7 @@ export default function Hero() {
 					initial={{ scale: 1.1 }}
 					animate={{ scale: 1 }}
 					transition={{ duration: 1.5, ease: "easeOut" }}
-					src={`../../public/download.png`}
+					src={`https://res.cloudinary.com/dfvng2adb/image/upload/v1766604042/ddj60hhe0ygjhjkqrsjc.jpg`}
 					alt="High fashion makeup"
 					className="w-full h-full object-cover"
 				/>
@@ -46,19 +47,37 @@ export default function Hero() {
 					transition={{ delay: 1, duration: 0.8 }}
 					className="flex justify-center items-center gap-4 "
 				>
+					<Link to={'book-now'}>
+						<Button
+							size="lg"
+							className="group relative overflow-hidden rounded-full  border border-2 border-black px-14 py-8 text-lg font-medium tracking-wide 
+             bg-gradient-to-br from-[#f6d1dc] via-[#fdf2f5] to-[#f6d1dc]
+             text-[#3a1f2d] shadow-[0_10px_20px_-10px_rgba(246,209,220,0.5)]
+             transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95"
+						>
+							{/* Subtle SVG Decorative Ornament */}
+							<Sparkles className="absolute -left-1 -top-1 h-12 w-12 text-[#f2c6d4]/30 transition-transform duration-700 group-hover:rotate-12" />
+
+							<span className="relative z-10 flex items-center">
+								Book a Free Consultation
+								<ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+							</span>
+						</Button>
+					</Link>
+
+					{/* Secondary Button: WhatsApp */}
 					<Button
 						size="lg"
-						className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-6 text-lg tracking-wide group"
+						className="group relative overflow-hidden rounded-full px-14 py-8 text-lg border border-2 border-black font-medium tracking-wide
+             bg-white/80 backdrop-blur-md text-[#3a1f2d]
+             border border-[#f2c6d4] shadow-sm
+             transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl active:scale-95"
 					>
-						Book a free consultation
-						<ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-					</Button>
-					<Button
-						size="lg"
-						className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-6 text-lg tracking-wide group"
-					>
-						Equire on Whatsapp
-						<ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+						<span className="relative z-10 flex items-center">
+							<MessageCircle className="mr-3 h-5 w-5 text-green-800" />
+							Enquire on WhatsApp
+							<ArrowRight className="ml-3 h-4 w-4 opacity-0 transition-all duration-300 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0" />
+						</span>
 					</Button>
 
 				</motion.div>

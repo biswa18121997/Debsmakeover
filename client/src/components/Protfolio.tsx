@@ -11,6 +11,26 @@ const works = [
 		review:
 			"Her bridal makeup was flawless and lasted all day. Highly recommended!",
 	},
+
+	{
+		id: 2,
+		title: "Editorial Glam",
+		category: "Editorial",
+		image:
+			"https://res.cloudinary.com/dfvng2adb/image/upload/v1766665592/u6mzk58e76gaco8xcrd0.jpg",
+		review:
+			"Debleena created a stunning editorial look that worked beautifully on camera.",
+	},
+	{
+		id: 5,
+		title: "Editorial Glam",
+		category: "Editorial",
+		image:
+			"https://res.cloudinary.com/dfvng2adb/image/upload/v1766604008/jtpc3q69sretykwq00tc.jpg",
+		review:
+			"Debleena created a stunning editorial look that worked beautifully on camera.",
+	},
+
 	{
 		id: 2,
 		title: "Editorial Glam",
@@ -25,7 +45,7 @@ const works = [
 		title: "Soft Natural Glow",
 		category: "Commercial",
 		image:
-			"https://res.cloudinary.com/dfvng2adb/image/upload/v1766604039/u6mzk58e76gaco8xcrd0.jpg",
+			"https://res.cloudinary.com/dfvng2adb/image/upload/v1766604047/gfwzvjcaokiqw4awwirf.jpg",
 		review:
 			"Loved the natural yet polished finish. Perfect for my shoot!",
 	},
@@ -72,7 +92,7 @@ export default function Home() {
 											<img
 												src={work.image}
 												alt={work.title}
-												className="w-full object-top h-full transform transition-transform duration-700 ease-out group-hover:scale-105"
+												className="w-auto h-auto object-top h-full transform transition-transform duration-700 ease-out group-hover:scale-105"
 											/>
 
 											{/* Hover Overlay Content */}
