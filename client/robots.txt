@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://debsmakeover.vercel.app/sitemap.xml
+
