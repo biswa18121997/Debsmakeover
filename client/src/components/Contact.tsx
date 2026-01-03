@@ -3,11 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Instagram, Facebook, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { SEO } from '../utils/SEO';
 export default function Contact() {
+	const currentPath = useLocation()?.pathname;
+	const isContactRoute = currentPath == '/contact' ? true : false;
 	return (
-		<section id="contact" className="py-24 bg-primary/5">
+		<section id="contact" className="py-24 bg-primary/5 relative top-10">
+			{isContactRoute && <SEO
+				title="Contact Debleena | Makeup Artist in Kolkata (Salt Lake & South Kolkata)"
+				description="Get in touch with DebsMakeover for bridal and party makeup inquiries in Kolkata. Available for on-site services in Salt Lake, New Town, Gariahat, and beyond."
+				canonical="https://debsmakeover.vercel.app/contact-us"
+			/>}
 			<div className="container mx-auto px-6">
 				<div className="grid md:grid-cols-2 gap-16">
 					<div>

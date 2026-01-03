@@ -45,7 +45,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 1, duration: 0.8 }}
-					className="flex justify-center items-center gap-4 "
+					className="flex flex-col md:flex-row justify-center items-center gap-4 "
 				>
 					<Link to={'book-now'}>
 						<Button

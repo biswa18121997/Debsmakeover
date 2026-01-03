@@ -5,6 +5,7 @@ import { rateLimit } from 'express-rate-limit';
 import logger from './utils/logger.js';
 import Routes from './Routes.js';
 import cors from 'cors';
+import type { CorsOptions } from 'cors';
 
 const app = express();
 const router = express.Router();
@@ -17,7 +18,31 @@ const limiter = rateLimit({
 	legacyHeaders: false,
 	ipv6Subnet: 56
 });
-app.use(cors());
+const whitelist: string[] = [
+	'http://localhost:5173',
+	'https://debsmakeover.vercel.app'
+];
+
+// 2. Configure type-safe options
+const corsOptions: CorsOptions = {
+	origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+		// Check if the origin is in the whitelist or if it's a "same-origin" request (undefined)
+		if (!origin || whitelist.includes(origin)) {
+			callback(null, true);
+		} else {
+			callback(new Error('Not allowed by CORS'));
+		}
+	},
+	methods: ['GET', 'POST', 'PUT', 'DELETE'],
+	credentials: false,
+	optionsSuccessStatus: 200,
+};
+
+// 3. Apply Middleware
+app.use(cors(corsOptions));
+
+// Handle pre-flight for all routes
+//app.options('*', cors(corsOptions));
 app.use(limiter);
 app.use(express.json());
 // Must be FIRST before logging req.body

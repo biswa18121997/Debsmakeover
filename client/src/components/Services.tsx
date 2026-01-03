@@ -3,7 +3,8 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import InquiryForm from "./InquiryForm";
-
+import { useLocation } from "react-router-dom";
+import { SEO } from "../utils/SEO";
 const services = [
 	{
 		title: "Bridal Makeup",
@@ -29,10 +30,21 @@ const services = [
 ];
 
 export default function Services() {
+	const currentRoute = useLocation();
+	//	console.log(currentRoute);
+	const isServiceRoute = currentRoute?.pathname == '/services' ? true : false;
+
 	// We only need one piece of state: the name of the service (or null)
 	const [selectedService, setSelectedService] = useState<string | null>(null);
 	return (
 		<section id="services" className="py-24 bg-secondary/30">
+			{isServiceRoute && <SEO
+				title="Makeup Services by Debleena | Best Bridal Makeup Artist in Kolkata"
+				description="Get a Glamorous Look at Home and On-site by, a certified professional makeup artist in Kolkata with 6+ years of experience. Specializing in Bengali bridal, editorial, and party makeup."
+				canonical="https://debsmakeover.vercel.app/services"
+			/>}
+
+
 			{/* 1. MOVE FORM OUTSIDE THE LOOP - Place it here so it's a single global modal */}
 			{selectedService && (
 				<InquiryForm

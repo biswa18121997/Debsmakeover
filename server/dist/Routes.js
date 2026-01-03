@@ -3,7 +3,7 @@ import createBooking from './controlleres/Bookings.js';
 import WakeServer from './controlleres/WakeServer.js';
 import contactUs from './controlleres/contactUs.js';
 export default function Routes(router) {
-    router.post('/book-session', createBooking);
+    router.post('/book-now', createBooking);
     router.get('/', WakeServer);
     router.post('/contact', contactUs);
 }

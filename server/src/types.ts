@@ -15,7 +15,7 @@ export interface BookingsType extends Document {
 	bookingForDate: Date;
 	bookingForTime: string;
 	serviceMode: string;
-	AdditionalNotes: string;
+	additionalNotes: string;
 	serviceType: ServiceType;  // <-- enum
 }
 

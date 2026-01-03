@@ -11,8 +11,8 @@ const BookingSchema = new mongoose.Schema<BookingsType>({
 	bookingForDate: { type: Date, required: true },
 	bookingForTime: { type: String, required: true },
 
-	serviceMode: { type: String, required: true },
-	AdditionalNotes: { type: String },
+	serviceMode: { type: String, required: true, enum: ['home-service', 'onsite-service'] },
+	additionalNotes: { type: String },
 
 	serviceType: {
 		type: String,

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
 	return (
 		<footer className="bg-foreground text-background py-12 border-t border-white/10">
@@ -9,7 +10,7 @@ export default function Footer() {
 
 				<div className="flex gap-8 text-sm text-white/80">
 					<a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-					<a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+					<Link to={'/terms-and-conditions'}><h3 className="hover:text-white transition-colors">Terms of Service</h3></Link>
 				</div>
 			</div>
 		</footer>

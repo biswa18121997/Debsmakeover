@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { SEO } from '../utils/SEO';
 
 const works = [
 	{
@@ -32,7 +33,7 @@ const works = [
 	},
 
 	{
-		id: 2,
+		id: 6,
 		title: "Editorial Glam",
 		category: "Editorial",
 		image:
@@ -52,9 +53,17 @@ const works = [
 ];
 
 export default function Home() {
+	const currentRoute = useLocation();
+	console.log(currentRoute);
+	const isPortfolioRoute = currentRoute?.pathname == '/portfolio' ? true : false;
 	return (
-		<div className="min-h-screen bg-background ">
-			<section id="portfolio" className="py-24 bg-gradient-to-r from-purple-100 to-purple-300 p-4">
+		<div className="min-h-screen bg-background">
+			{isPortfolioRoute && <SEO
+				title="Bridal & Party Makeup Portfolio | DebsMakeover Kolkata"
+				description="Explore the gallery of stunning bridal makeovers by Debleena. Featuring traditional Bengali brides, reception looks, and editorial makeup in Kolkata."
+				canonical="https://debsmakeover.vercel.app/portfolio"
+			/>}
+			<section id="portfolio" className="py-24 bg-gradient-to-r from-orange-200 to-purple-400 p-4 ">
 				<div className="container mx-auto px-6">
 					{/* Header */}
 					<motion.div
@@ -63,7 +72,7 @@ export default function Home() {
 						viewport={{ once: true }}
 						className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-border/40 pb-8"
 					>
-						<div className="max-w-2xl">
+						<div className="max-w-2xl relative top-16">
 							<span className="text-sm font-medium tracking-widest text-primary/80 uppercase mb-2 block">Portfolio</span>
 							<h2 className="text-4xl md:text-6xl font-serif text-foreground mb-6">Proof of Work</h2>
 							<p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
@@ -74,7 +83,7 @@ export default function Home() {
 					</motion.div>
 
 					{/* Portfolio Items */}
-					<div className="space-y-24">
+					<div className="space-y-24 rounded-full border-t-2 border-r-2 m-4 p-2">
 						{works.map((work, idx) => (
 							<motion.div
 								key={work.id}
@@ -86,32 +95,32 @@ export default function Home() {
 							>
 								{/* Image Section - Alternates Left/Right */}
 								<div className={`md:col-span-7 lg:col-span-8 ${idx % 2 === 1 ? 'md:order-last' : 'md:order-first'}`}>
-									<Link to={`/portfolio/${work.id}`}>
-										<a className="block relative overflow-hidden rounded-2xl shadow-2xl group cursor-pointer aspect-[4/3]">
-											<div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-											<img
-												src={work.image}
-												alt={work.title}
-												className="w-auto h-auto object-top h-full transform transition-transform duration-700 ease-out group-hover:scale-105"
-											/>
+									{/*	<Link to={`/portfolio/${work.id}`}> */}
+									<section className="block relative overflow-hidden rounded-2xl shadow-2xl group cursor-pointer aspect-[4/3]">
+										<div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+										<img
+											src={work.image}
+											alt={work.title}
+											className="w-auto object-center  h-auto object-top h-full transform transition-transform duration-700 ease-out group-hover:scale-105"
+										/>
 
-											{/* Hover Overlay Content */}
-											<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 flex items-end p-8">
-												<div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-													<span className="text-white/90 text-sm font-medium tracking-wider uppercase bg-primary/80 px-3 py-1 rounded-full backdrop-blur-sm">
-														{work.category}
-													</span>
-												</div>
+										{/* Hover Overlay Content */}
+										<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 flex items-end p-8">
+											<div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+												<span className="text-white/90 text-sm font-medium tracking-wider uppercase bg-primary/80 px-3 py-1 rounded-full backdrop-blur-sm">
+													{work.category}
+												</span>
 											</div>
-										</a>
-									</Link>
+										</div>
+									</section>
+									{/*	</Link> */}
 								</div>
 
 								{/* Content Section */}
 								<div className={`md:col-span-5 lg:col-span-4 ${idx % 2 === 1 ? 'md:order-first md:text-right' : 'md:order-last'}`}>
 									<div className="relative">
 										{/* Decor number */}
-										<span className={`absolute -top-16 text-9xl font-serif text-muted/10 select-none ${idx % 2 === 1 ? 'right-0' : 'left-0'}`}>
+										<span className={`absolute -top-16 text-9xl font-serif text-muted/50 select-none ${idx % 2 === 1 ? 'right-0' : 'left-0'}`}>
 											0{idx + 1}
 										</span>
 

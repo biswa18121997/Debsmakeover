@@ -33,16 +33,19 @@ export default function Navbar() {
 			<div className="container mx-auto px-6 flex items-center justify-between">
 				<Link to={'/'}>
 
-					<a className="text-3xl font-serif tracking-tight flex items-center gap-2">
-						<img width="58" height="58" className="border-t-2 border-l-2 rounded-lg p-2 " src="https://img.icons8.com/color/48/cosmetic-brush.png" alt="cosmetic-brush" />
-						<span className="font-light text-neutral-400">DEBLEENA’S</span>
-
-						<span className="relative font-extrabold text-white shadow-md shadow-black-500">
-							BLUSH
-							<span className="absolute left-0 -bottom-1 w-full h-[2px] bg-slate-300"></span>
-							<span className="absolute left-0 -bottom-2.5 w-full h-[2px] bg-white"></span>
+					<section className="text-3xl font-serif tracking-tight flex items-center gap-2">
+						<img className="h-20 w-20 border-t-2 border-l-2 rounded-full m-1 " src="https://res.cloudinary.com/dfvng2adb/image/upload/v1767027478/yscsrz3fax07kdx2h9iw.png" alt="cosmetic-brush" />
+						<span className="font-light text-neutral-400 rounded-full  border-r-2 border-b-3">DEBLEENA’S
+							<span className="relative font-extrabold text-white shadow-md shadow-black-500 w-fit h-fit">
+								<br />
+								MakeOver
+								<span className="relative left-0 -bottom-1 w-full h-[2px] bg-slate-300"></span>
+								<span className="absolute left-0 -bottom-2.5 w-full h-[2px] bg-white"></span>
+							</span>
 						</span>
-					</a>
+						<br />
+
+					</section>
 
 
 				</Link>
@@ -50,13 +53,13 @@ export default function Navbar() {
 				{/* Desktop Nav */}
 				<div className="hidden md:flex items-center space-x-8">
 					{navLinks.map((link) => (
-						<a
+						<Link
 							key={link.name}
-							href={link.href}
+							to={link.href}
 							className="text-md font-medium tracking-wide hover:text-primary transition-colors"
 						>
 							{link.name.toUpperCase()}
-						</a>
+						</Link>
 					))}
 					<Link to={'/book-now'}>
 						<Button variant="outline" className="rounded-full px-6 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
@@ -76,13 +79,13 @@ export default function Navbar() {
 						<SheetContent>
 							<div className="flex flex-col space-y-6 mt-10">
 								{navLinks.map((link) => (
-									<a
+									<Link
 										key={link.name}
-										href={link.href}
+										to={link.href}
 										className="text-2xl font-serif font-medium"
 									>
 										{link.name}
-									</a>
+									</Link>
 								))}
 								<Link to={'/book-now'}>
 									<Button className="w-full rounded-full mt-4">Book Appointment</Button>

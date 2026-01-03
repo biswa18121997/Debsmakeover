@@ -1,7 +1,7 @@
 export const DiscordConnect = async (message) => {
-    const webhookURL = process.env.DISCORD_APPLICATION_TRACKING_CHANNEL;
+    const webhookURL = process.env.DISCORD_UPDATES_URL;
     try {
-        console.log("WebhookURL", webhookURL);
+        //	console.log("WebhookURL", webhookURL)
         const response = await fetch(webhookURL, {
             method: 'POST',
             headers: {
