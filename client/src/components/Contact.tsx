@@ -28,10 +28,10 @@ export default function Contact() {
 								<h3 className="text-lg font-medium mb-2">Email</h3>
 
 								<Link
-									to="mailto:hello@elenarossi.com"
+									to="/contact-us"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
-									rs660716@gmail.com
+									debleenadasgupta381@gmail.com
 								</Link>
 
 							</div>
@@ -55,7 +55,7 @@ export default function Contact() {
 									</Link>
 								</div>
 							</div>
-							<Link to={`https://wa.me/918777630087`} target="_blank">
+							<Link to={`https://wa.me/919123873482`} target="_blank">
 								<motion.div
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
