@@ -4,6 +4,7 @@ import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import ReactGA from 'react-ga4';
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);

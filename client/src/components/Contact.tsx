@@ -11,12 +11,12 @@ export default function Contact() {
 	const currentPath = useLocation()?.pathname;
 	const isContactRoute = currentPath == '/contact' ? true : false;
 
-	interface contactFormType {
-		email: string;
-		name: string;
-		serviceInterestedIn: string;
-		message: string;
-	}
+	//	interface contactFormType {
+	//		email: string;
+	//		name: string;
+	//		serviceInterestedIn: string;
+	//		message: string;
+	//	}
 	const [loadingSpinner, setLoadingSpinner] = useState(false);
 	const [sucessMessage, setSucessMessage] = useState('');
 	const [contactForm, setContactForm] = useState({
