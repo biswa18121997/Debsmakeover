@@ -1,10 +1,11 @@
 import mongoose, { Document } from 'mongoose';
 
 export enum ServiceType {
-	MAKEUP = "makeup",
-	HAIRSTYLING = "hairstyling",
+	EVENT = "event",
 	BRIDAL = "bridal",
-	GROOMING = "grooming"
+	//	GROOMING = "grooming",
+	EDITORIAL = "editorial",
+	OTHER = "other"
 }
 
 export interface BookingsType extends Document {

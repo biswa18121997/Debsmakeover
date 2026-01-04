@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import ReactGA from 'react-ga4';
 export default function Hero() {
 	return (
 		<section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
@@ -47,8 +47,16 @@ export default function Hero() {
 					transition={{ delay: 1, duration: 0.8 }}
 					className="flex flex-col md:flex-row justify-center items-center gap-4 "
 				>
-					<Link to={'book-now'}>
+					<Link to={'/book-now'}>
 						<Button
+							onClick={() => {
+								ReactGA.event({
+									category: "Conversion",
+									action: "Click Book Now",
+									label: "Hero book-now Button", // Useful if you have multiple 'Book Now' buttons
+								});
+							}
+							}
 							size="lg"
 							className="group relative overflow-hidden rounded-full  border border-2 border-black px-14 py-8 text-lg font-medium tracking-wide 
              bg-gradient-to-br from-[#f6d1dc] via-[#fdf2f5] to-[#f6d1dc]
@@ -68,6 +76,13 @@ export default function Hero() {
 					{/* Secondary Button: WhatsApp */}
 					<Link to={`https://wa.me/918777630087`} target="_blank">
 						<Button
+							onClick={() => {
+								ReactGA.event({
+									category: "Conversion",
+									action: "Click Whatsapp Button",
+									label: "Whatsapp Button",
+								});
+							}}
 							size="lg"
 							className="group relative overflow-hidden rounded-full px-14 py-8 text-lg border border-2 border-black font-medium tracking-wide
              bg-white/80 backdrop-blur-md text-[#3a1f2d]

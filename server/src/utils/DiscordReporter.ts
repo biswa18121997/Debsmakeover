@@ -1,5 +1,5 @@
 
-export const DiscordConnect = async (message: string): Promise<void> => {
+export const DiscordConnect = async (message: any): Promise<void> => {
 
 	const webhookURL = process.env.DISCORD_UPDATES_URL as string;
 	try {
@@ -9,9 +9,7 @@ export const DiscordConnect = async (message: string): Promise<void> => {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({
-				content: `🚨 App Update: ${message}`,
-			}),
+			body: JSON.stringify(message),
 		});
 
 		if (!response.ok) {

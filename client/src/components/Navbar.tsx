@@ -88,7 +88,16 @@ export default function Navbar() {
 									</Link>
 								))}
 								<Link to={'/book-now'}>
-									<Button className="w-full rounded-full mt-4">Book Appointment</Button>
+									<Button onClick={() => {
+										ReactGA.event({
+											category: "Conversion",
+											action: "Click Book Now",
+											label: "Header Button", // Useful if you have multiple 'Book Now' buttons
+										});
+									}
+									}
+										className="w-full rounded-full mt-4">Book Appointment
+									</Button>
 								</Link>
 							</div>
 						</SheetContent>

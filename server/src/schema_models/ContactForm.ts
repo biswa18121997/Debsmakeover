@@ -13,7 +13,7 @@ const ContactFormSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		default: 'other',
-		enum: ['bridal_makeup', 'editorial/photoshoot', 'speecial_occasion', 'other']
+		enum: ['bridal', 'editorial', 'event', 'other']
 	},
 	message: {
 		type: String,

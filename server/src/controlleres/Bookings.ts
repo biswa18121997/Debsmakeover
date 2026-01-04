@@ -11,8 +11,6 @@ export default async function createBooking(req: Request, res: Response) {
 			logger.error('Booking data not found');
 			return res.status(400).json({ message: "bookingData is required" });
 		}
-
-		// 2. Map data from bookingData, not req.body
 		const newBooking = await Booking.create({
 			customerName: name,
 			customerEmail: email,
@@ -25,23 +23,30 @@ export default async function createBooking(req: Request, res: Response) {
 			additionalNotes: notes
 		});
 
-		// 3. Prepare Discord message using the saved document data
-		const message =
-			`📅 New Booking Received:
-  Update Type: 'New Booking',
-  Client Name: ${name}
-  Service Mode: ${serviceMode}
-  Service Name: ${service}
-  Client Email: ${email}
-  Client Mobile: ${phone}
-  Service Date: ${date}
-  Service Time: ${time}
-  Booking Date: ${new Date().toLocaleString('en-US', {
-				timeZone: 'Asia/Kolkata'
-			})
-			}`;
+		// 3. Prepare Discord Embed
+		const embed: any = {
+			title: "📅 New Booking Received",
+			color: 0x00ff00, // Green color
+			fields: [
+				{ name: "Client Name", value: name, inline: true },
+				{ name: "Client Email", value: email, inline: true },
+				{ name: "Client Mobile", value: phone, inline: true },
+				{ name: "Service Mode", value: serviceMode, inline: true },
+				{ name: "Service Name", value: service, inline: true },
+				{ name: "Service Date", value: date, inline: true },
+				{ name: "Service Time", value: time, inline: true },
+			],
+			footer: {
+				text: `Booking Date: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })}`
+			}
+		};
 
-		await DiscordConnect(JSON.stringify(message));
+		// Send as an object wraped in an 'embeds' array
+		await DiscordConnect({ embeds: [embed] });
+
+		// 3. Prepare Discord message using the saved document data
+
+		//	await DiscordConnect(JSON.stringify(message));
 
 		return res.status(201).json({
 			message: "Booking created successfully",

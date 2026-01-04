@@ -3,13 +3,22 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import { useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-
+import ReactGA from 'react-ga4';
 // Define the shape of your expected API response
 interface WakeResponse {
 	message: string;
 }
 
+const GOOGLE_ANALYTICS_TRACKING_CODE = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID as string;
+ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_CODE);
 export default function App() {
+	useEffect(() => {
+		// 2. Track the page view when the component mounts
+		ReactGA.send({
+			hitType: "pageview",
+			page: window.location.pathname + window.location.search
+		});
+	}, []);
 
 	const wakeServer = async (): Promise<void> => {
 		try {

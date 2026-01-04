@@ -1,9 +1,10 @@
 import mongoose, { Document } from 'mongoose';
 export var ServiceType;
 (function (ServiceType) {
-    ServiceType["MAKEUP"] = "makeup";
-    ServiceType["HAIRSTYLING"] = "hairstyling";
+    ServiceType["EVENT"] = "event";
     ServiceType["BRIDAL"] = "bridal";
-    ServiceType["GROOMING"] = "grooming";
+    //	GROOMING = "grooming",
+    ServiceType["EDITORIAL"] = "editorial";
+    ServiceType["OTHER"] = "other";
 })(ServiceType || (ServiceType = {}));
 //# sourceMappingURL=types.js.map

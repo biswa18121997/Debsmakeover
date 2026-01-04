@@ -3,21 +3,21 @@ export declare const ContactForm: mongoose.Model<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }, {}, {}, {
     id: string;
 }, mongoose.Document<unknown, {}, {
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }, {
     id: string;
 }, mongoose.DefaultSchemaOptions> & Omit<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 } & {
     _id: mongoose.Types.ObjectId;
 } & {
@@ -28,19 +28,19 @@ export declare const ContactForm: mongoose.Model<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }, mongoose.Document<unknown, {}, {
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }, {
     id: string;
 }, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & Omit<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 } & {
     _id: mongoose.Types.ObjectId;
 } & {
@@ -54,14 +54,14 @@ export declare const ContactForm: mongoose.Model<{
         name: string;
         message: string;
         email: string;
-        serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+        serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
     }, {
         id: string;
     }, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & Omit<{
         name: string;
         message: string;
         email: string;
-        serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+        serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
     } & {
         _id: mongoose.Types.ObjectId;
     } & {
@@ -73,7 +73,7 @@ export declare const ContactForm: mongoose.Model<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }> & {
     _id: mongoose.Types.ObjectId;
 } & {
@@ -82,7 +82,7 @@ export declare const ContactForm: mongoose.Model<{
     name: string;
     message: string;
     email: string;
-    serviceInterestedIn: "other" | "bridal_makeup" | "editorial/photoshoot" | "speecial_occasion";
+    serviceInterestedIn: "event" | "bridal" | "editorial" | "other";
 }> & {
     _id: mongoose.Types.ObjectId;
 } & {

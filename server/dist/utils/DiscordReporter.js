@@ -7,9 +7,7 @@ export const DiscordConnect = async (message) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                content: `🚨 App Update: ${message}`,
-            }),
+            body: JSON.stringify(message),
         });
         if (!response.ok) {
             throw new Error(`Failed to send: ${response.statusText}, ${message}`);

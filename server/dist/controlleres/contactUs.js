@@ -4,15 +4,15 @@ export default async function contactUs(req, res, next) {
     try {
         let { name, email, serviceInterestedIn, message } = req.body;
         await ContactForm.insertOne({ name, email, serviceInterestedIn, message });
-        res.status(201).json({
+        logger.info('contact form submitted', req.body);
+        return res.status(201).json({
             sucess: true,
             message: 'contact form submitted sucessfully!..You can expect a call/email soon'
         });
-        logger.info('contact form submitted', req.body);
     }
     catch (error) {
         logger.error(error);
-        res.status(500).json({
+        return res.status(500).json({
             message: 'internal server error',
             error
         });

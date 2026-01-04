@@ -57,6 +57,11 @@ function BookingForm() {
 
 	async function onSubmit(values: BookingFormValues) {
 		try {
+			if (!values?.name || !values?.phone || !values.service || !values.serviceMode) {
+				alert('please enter all the required feilds : name, phone, service type & service mode');
+				return;
+			}
+
 			const res = await fetch(
 				import.meta.env.VITE_API_BASE_URL + "/book-now",
 				{
@@ -105,6 +110,7 @@ function BookingForm() {
 							{/* SECTION: SERVICE SELECTION */}
 							<div className="space-y-6">
 								<FormField
+
 									control={form.control}
 									name="service"
 									render={({ field }) => (
@@ -112,6 +118,7 @@ function BookingForm() {
 											<FormLabel className="text-xl font-serif font-medium text-slate-800">1. Choose Service</FormLabel>
 											<FormControl>
 												<RadioGroup
+													required={true}
 													onValueChange={field.onChange}
 													defaultValue={field.value}
 													className="grid grid-cols-2 md:grid-cols-4 gap-4"
@@ -140,6 +147,7 @@ function BookingForm() {
 											<FormLabel className="text-xl font-serif font-medium text-slate-800">2. Service Mode</FormLabel>
 											<FormControl>
 												<RadioGroup
+													required={true}
 													onValueChange={field.onChange}
 													defaultValue={field.value}
 													className="grid grid-cols-1 md:grid-cols-2 gap-4"
