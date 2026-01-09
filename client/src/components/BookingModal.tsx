@@ -27,6 +27,8 @@ import {
 } from "@/components/ui/card";
 import { toast } from "sonner";
 import { SEO } from '../utils/SEO';
+import { useState } from "react";
+import { Spinner } from "./ui/spinner";
 
 type BookingFormValues = {
 	name: string;
@@ -54,11 +56,14 @@ function BookingForm() {
 			notes: "",
 		},
 	});
+	const [loading, setLoading] = useState(false);
 
 	async function onSubmit(values: BookingFormValues) {
+		setLoading(true);
 		try {
 			if (!values?.name || !values?.phone || !values.service || !values.serviceMode) {
 				alert('please enter all the required feilds : name, phone, service type & service mode');
+				setLoading(false);
 				return;
 			}
 
@@ -75,14 +80,16 @@ function BookingForm() {
 				toast.success("Booking Request Sent", {
 					description: "We've received your request and will confirm shortly.",
 				});
+				setLoading(false);
 			}
 		} catch (error) {
+			setLoading(false);
 			console.error(error);
 		}
 	}
 
 	return (
-		<div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-no-repeat bg-center  bg-fixed bg-center bg-[url(https://res.cloudinary.com/dfvng2adb/image/upload/v1766778492/fph0dcpatn4zmokyutho.png)]">
+		<div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-no-repeat object-contain bg-center  bg-fixed bg-center bg-[url(https://res.cloudinary.com/dfvng2adb/image/upload/v1766778492/fph0dcpatn4zmokyutho.png)]">
 			{/* Overlay for better text readability if needed, but user wanted visibility */}
 			<div className="absolute inset-0 bg-gradient-to-b from-orange-500/30 via-rose-400/40 to-stone-900/60 pointer-events-none" />
 
@@ -92,7 +99,7 @@ function BookingForm() {
 				canonical="https://debsmakeover.vercel.app/book-now"
 			/>
 
-			<Card className="w-full max-w-4xl relative z-10 bg-white/20 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] rounded-3xl overflow-hidden">
+			<Card className="w-full max-w-4xl relative z-10 bg-white/20 backdrop-blur-sm border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] rounded-3xl overflow-hidden">
 				<CardHeader className="space-y-2 text-center pb-6 pt-8">
 					<div className="mx-auto mb-4 p-4 rounded-full bg-white/30 backdrop-blur-sm shadow-inner w-fit ring-1 ring-white/40">
 						<Sparkles className="w-8 h-8 text-rose-100" />
@@ -288,8 +295,8 @@ function BookingForm() {
 								</div>
 							</div>
 
-							<Button type="submit" className="w-full h-14 text-lg font-serif font-semibold shadow-lg hover:shadow-rose-300/50 hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r from-rose-500 to-orange-400 border-none">
-								Confirm Booking Request
+							<Button type="submit" disabled={loading} className="w-full h-14 text-lg font-serif font-semibold shadow-lg hover:shadow-rose-300/50 hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r from-rose-500 to-orange-400 border-none">
+								{loading && <Spinner className="h-6 w-6" />} Confirm Booking Request
 							</Button>
 						</form>
 					</Form>

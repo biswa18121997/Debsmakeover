@@ -74,7 +74,7 @@ export default function Hero() {
 					</Link>
 
 					{/* Secondary Button: WhatsApp */}
-					<Link to={`https://wa.me/918777630087`} target="_blank">
+					<Link to={`https://wa.me/919123873482`} target="_blank">
 						<Button
 							onClick={() => {
 								ReactGA.event({

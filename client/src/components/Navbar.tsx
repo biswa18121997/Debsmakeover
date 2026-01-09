@@ -78,12 +78,13 @@ export default function Navbar() {
 							</Button>
 						</SheetTrigger>
 						<SheetContent>
-							<div className="flex flex-col space-y-6 mt-10">
+							<div className="pl-2 flex flex-col space-y-6 mt-10">
+
 								{navLinks.map((link) => (
 									<Link
 										key={link.name}
 										to={link.href}
-										className="text-2xl font-serif font-medium"
+										className="p-2 m-2 border-l-2 border-b-3 rounded-lg hover:shadow-md text-2xl font-serif font-medium"
 									>
 										{link.name}
 									</Link>

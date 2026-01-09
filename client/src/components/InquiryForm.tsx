@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { Spinner } from "./ui/spinner";
 
 // Define types for the props
 interface InquiryFormProps {
@@ -17,6 +18,9 @@ const InquiryForm = ({ selectedInquiry, isOpen, onClose }: InquiryFormProps) => 
 		service: "",
 		notes: "",
 	});
+	const [loading, setLoading] = useState(false);
+	const [responseMessage, setResponseMessage] = useState('');
+
 
 	useEffect(() => {
 		if (selectedInquiry) {
@@ -33,11 +37,45 @@ const InquiryForm = ({ selectedInquiry, isOpen, onClose }: InquiryFormProps) => 
 	// Type the form submission event
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
-		console.log("Submitting:", formData);
-		alert("Thank you! Your inquiry has been sent.");
-		onClose();
-	};
+		setLoading(true);
+		setResponseMessage('');
 
+		try {
+			const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/inquire`, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+
+			const data = await response.json();
+
+			if (!response.ok || !data.success) {
+				setLoading(false);
+				setResponseMessage(data.message || 'Something went wrong');
+				return;
+			}
+
+			// SUCCESS PATH
+			setResponseMessage(data.message || 'Submitted successfully!');
+			setLoading(false);
+
+			setFormData({ name: '', phone: '', service: selectedInquiry || '', notes: '' });
+
+			// 1. Reset the form fields immediately
+
+			// 2. Wait 2 seconds so the user can read the success message, then close
+			setTimeout(() => {
+				onClose();
+				// 3. Clear the message AFTER it closes so it's clean for next time
+				setResponseMessage('');
+			}, 2000);
+
+		} catch (error) {
+			console.error("Submission error:", error);
+			setLoading(false);
+			setResponseMessage('Something went wrong');
+		}
+	};
 	return (
 		<AnimatePresence>
 			{isOpen && (
@@ -77,11 +115,17 @@ const InquiryForm = ({ selectedInquiry, isOpen, onClose }: InquiryFormProps) => 
 									<label className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold ml-1">Notes</label>
 									<textarea id="notes" rows={3} className="w-full border border-slate-100 p-4 focus:outline-none focus:border-primary bg-slate-50/50" value={formData.notes} onChange={handleChange} />
 								</div>
-								<button type="submit" className="w-full bg-slate-900 text-white py-4 text-xs uppercase tracking-[0.3em] font-bold hover:bg-primary transition-all duration-500">
+								<button type="submit" disabled={loading} className="w-full bg-slate-900 text-white py-4 text-xs uppercase tracking-[0.3em] font-bold hover:bg-primary transition-all duration-500">
+									{loading && <Spinner className="h-10 w-10" />}
 									Request Consultation
 								</button>
 							</form>
-						</div>
+						</div>{responseMessage && (
+							<p className={`mt-4 text-center text-lg font-medium ${responseMessage.includes('wrong') ? 'text-red-600' : 'text-emerald-600'
+								}`}>
+								{responseMessage}
+							</p>
+						)}
 					</motion.div>
 				</>
 			)}
