@@ -8,7 +8,7 @@ interface SeoProps {
 }
 
 export const SEO = ({ title, description, canonical, ogImage }: SeoProps) => {
-	const siteName = "YourBrandName";
+	const siteName = "Debleena's Makeover";
 	const fullTitle = `${title} | ${siteName}`;
 
 	return (
